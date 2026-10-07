@@ -1,0 +1,8 @@
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"
+markers = [
+    "qrng_live: chama a API real da ANU (consome cota); pulado por padrão",
+]
+addopts = "-m 'not qrng_live'"
